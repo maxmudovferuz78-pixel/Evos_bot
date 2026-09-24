@@ -6,8 +6,19 @@ from register import check
 from messages import message_handler
 from inlines import inline_handler
 import globals
+
+import os
+from dotenv import load_dotenv
+
+# .env faylidagi o'zgaruvchilarni yuklaymiz
+load_dotenv()
+
+# Tokenni muhitdan olamiz
+TOKEN = os.getenv("BOT_TOKEN")
+
+# Tekshirish uchun print yozib ko'ring (keyin o'chirib tashlaysiz)
+print(f"Yuklangan token: {TOKEN}")
 ADMIN_ID = "ADMIN_ID"
-TOKEN = "TOKEN"
 
 db = Database("db-evos.db")
 
